@@ -2,7 +2,6 @@ require 'rubygems'
 require 'grape'
 require 'json'
 require '3scale/client'
-require '3scale_client'
 require "#{File.dirname(__FILE__)}/analyzer"
 
 class SentimentApiV2_1 < Grape::API
