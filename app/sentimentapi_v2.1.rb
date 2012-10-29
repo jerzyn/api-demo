@@ -9,7 +9,7 @@ class SentimentApiV2_1 < Grape::API
   error_format :json
   
   #Links to 3scale infrastructure
-  $client = ThreeScale::Client.new(:provider_key => "dda257b85eae0686d9d51908e585cae7")
+  $client = ThreeScale::Client.new(:provider_key => "f7bf6b41a6c0fda7a9c8c0cf00e0f611")
   
   #Sentiment Logic component
   @@the_logic = Analyzer.new
