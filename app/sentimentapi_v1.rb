@@ -11,20 +11,21 @@ class SentimentApiV1 < Grape::API
   
   resource :words do
     get ':word' do
-        #{:word => params[:word], :sentiment => "unkown"}.to_json
-	@@the_logic.word(params[:word]).to_json
+      #{:word => params[:word], :sentiment => "unkown"}.to_json
+      @@the_logic.word(params[:word]).to_json
     end
     
     post ':word' do
-	#{:word => params[:word], :result => "thinking"}.to_json
-	res =  @@the_logic.add_word(params[:word],params[:value])
+      #{:word => params[:word], :result => "thinking"}.to_json
+      res =  @@the_logic.add_word(params[:word],params[:value])
+      res.to_json
     end 
   end
   
   resource :sentences do
-    get ':sentence' 
-	#{:sentence => params[:sentence], :result => "unkown"}.to_json
-	@@the_logic.sentence(params[:sentence]).to_json
+    get ':sentence' do
+      #{:sentence => params[:sentence], :result => "unkown"}.to_json
+      @@the_logic.sentence(params[:sentence]).to_json
     end
   end
 
